@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rathees Thillainathan - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Light cyan */
+            color: #333;
+            text-align: center; /* Center-align text in the body */
+        }
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('download1.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        header img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+        header img:hover {
+            transform: scale(1.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: text3D 2s infinite alternate;
+        }
+        @keyframes text3D {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), -2px -2px 4px rgba(0, 0, 0, 0.7);
+            }
+            to {
+                text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), -4px -4px 8px rgba(0, 0, 0, 0.7);
+            }
+        }
+        .contact-info {
+            margin-top: 1rem;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #b2dfdb; /* Light teal */
+        }
+        .contact-info i {
+            margin-right: 0.5rem;
+        }
+        .download-cv {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        .download-cv a {
+            color: #b2dfdb; /* Light teal */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid #b2dfdb; /* Light teal */
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .download-cv a:hover {
+            background-color: #b2dfdb; /* Light teal */
+            color: #333;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #00796b; /* Darker teal */
+            padding: 1rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transform: perspective(1px) translateZ(0);
+            transition: transform 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            transform: scale(1.1);
+            color: #004d40; /* Teal */
+        }
+        .container {
+            padding: 2rem;
+            margin-left: auto; /* Center the container */
+            margin-right: auto; /* Center the container */
+            max-width: 800px; /* Set a maximum width */
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        .portfolio-item, .project-item {
+            background-color: #e0f2f1; /* Light teal */
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: perspective(1px) translateZ(0);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover, .project-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .project-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        h2 {
+            border-bottom: 2px solid #004d40; /* Teal */
+            padding-bottom: 0.5rem;
+            color: #004d40; /* Teal */
+            font-weight: 600;
+        }
+        .portfolio-item h3, .project-item h3 {
+            margin-top: 0;
+            color: #00796b; /* Darker teal */
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #004d40; /* Teal */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #004d40; /* Teal */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #00796b; /* Darker teal */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+            .container {
+                padding: 1rem;
+                margin-left: auto; /* Center the container */
+                margin-right: auto; /* Center the container */
+            }
+            .portfolio-item, .project-item {
+                padding: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav {
+                padding: 0.5rem 0;
+            }
+            nav a {
+                font-size: 0.9rem;
+                margin: 0.25rem 0;
+            }
+            .container {
+                padding: 0.5rem;
+                margin-left: auto; /* Center the container */
+                margin-right: auto; /* Center the container */
+            }
+            .portfolio-item, .project-item {
+                padding: 0.25rem;
+            }
+            header img {
+                width: 100px;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-info a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="face.jpg" alt="Your Photo">
+            <h1>Rathees Thillainathan</h1>
+            <div class="contact-info">
+                <a href="mailto:trathees01@gmail.com"><i class="fas fa-envelope"></i>trathees01@gmail.com</a>
+                <a href="tel:+94770216957"><i class="fas fa-phone"></i>+94-770216957</a>
+                <a href="https://www.linkedin.com/in/rathees-thillainathan-2677221bb/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            </div>
+            <div class="download-cv">
+                <a href="Rathees-CV.pdf" download><i class="fas fa-file-download"></i> Download my CV</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#courses">Courses</a>
+        <a href="#activities">Activities</a>
+        <a href="#references">References</a>
+    </nav>
+    <div class="container">
+        <section id="personal-statement">
+            <h2>About Me...</h2>
+            <p>A highly motivated Mechanical Engineer with expertise in CAD/CAM design, automotive engineering, and a deep passion for agricultural innovation.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="portfolio-item">
+                <h3>Bachelor of Science in Mechanical Engineering</h3>
+                <p>University of Moratuwa, Sri Lanka<br>
+                CGPA: 3.15<br>
+                January 2020 - May 2024</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>G.C.E Advanced Level</h3>
+                <p>Kokuvil Hindu College<br>
+                Z-Score: 1.9943<br>
+                Mathematics: A, Physics: A, Chemistry: A<br>
+                January 2017 - December 2019</p>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="portfolio-item">
+                <h3>Technical Skills</h3>
+                <p>CAD Software: SolidWorks, AutoCAD, CATIA<br>
+                Simulation Software: ANSYS, MATLAB<br>
+                Programming: Python, C++<br>
+                Manufacturing Processes, FEA Analysis, Design for Manufacturability (DFM)</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Soft Skills</h3>
+                <p>Project Management, Team Leadership, Problem Solving, Communication, Time Management, Adaptability</p>
+            </div>
+        </section>
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <div class="portfolio-item">
+                <h3>Mechanical Engineering Intern - ThermalR Industries</h3>
+                <p>June 2023 - August 2023<br>
+                - Assisted in the design and development of mechanical components.<br>
+                - Conducted simulations and FEA analysis.<br>
+                - Collaborated with a team of engineers to improve manufacturing processes.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Manufactured the Developed Chassis Design</h3>
+                <p>April 2023 - June 2023<br>
+                Tools: Solid Works, Ansys<br>
+                - Oversaw the manufacturing process, ensuring quality control.<br>
+                - Completed manufacturing phase within 2 months.</p>
+		<img src="BIKE_TR.jpg" alt="Automated Vegetable Transplanting Machine" style="max-width: 500px; height: auto;">
+
+            </div>
+            <div class="portfolio-item">
+                <h3>Design and Implementation of Rotating Platform for Peregrine Bike</h3>
+                <p>January 2023 - February 2023<br>
+                Tool: Solid Edge<br>
+                - Designed the stage considering the weight and wheelbase of the bike.<br>
+                - Performed FEA analysis to minimize material and cost.<br>
+                - Selected a suitable motor considering the rotating weight and rpm.</p>
+		<img src="revolving_stage.jpg" alt="Automated Vegetable Transplanting Machine" style="max-width: 500px; height: auto;">
+
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Design and Development of Automated Vegetable Transplanting Machine</h3>
+                <p>Final Year Project: Tool - Solid Works<br>
+                - Designed a transplanting machine for local farmers.<br>
+                - Conducted CAD design for each part and mechanism.<br>
+                - Developed a prototype to ensure functionality.</p>
+                <img src="MixCollage-28-May-2024-10-55-AM-1313.jpg" alt="Automated Vegetable Transplanting Machine" style="max-width: 500px; height: auto;">
+            </div>
+            <div class="project-item">
+                <h3>Design and Development of Garbage sorting system</h3>
+                <p>Third Year Project: Tool - Solid Works<br>
+                - Designed a garbage collection vehicle for urban areas.<br>
+                - Conducted FEA analysis to ensure durability and efficiency.<br>
+                - Created a working model for testing purposes.</p>
+                <img src="MixCollage-28-May-2024-09-39-AM-5626.jpg" alt="Garbage Collection Vehicle" style="max-width: 500px; height: auto;">
+            </div>
+            <div class="project-item">
+                <h3>Coconut Splitting machine Project</h3>
+                <p>Third Year Project: Tool - NX<br>
+                -Generated Several Concepts and selected a suitable one using the concept sorting method.<br>
+                - Designed each mechanism with proper calculation of parameters.<br>
+                - Fabricated the product using University workshops.</p>
+                <img src="MixCollage-28-May-2024-01-45-PM-3424.jpg" alt="Garbage Collection Vehicle" style="max-width: 500px; height: auto;">
+            </div>
+            <div class="project-item">
+                <h3>Implementation of Cooling system using SCADA</h3>
+                <p>Mechatronics project: Tool - Python, C++<br>
+                - Built and installed the system using a cooling fan, temperature sensor, Potentiometer and ESP 32 were the apparatus used.<br>
+                - Created a Graphical user interface using the Tkinter library in Python.<br>
+                - Log-in window for the user and admin to make the interface more secure, Manual Mode and Auto Mode is available. It can shift at any time.</p>
+                <img src="      " alt="Cooling System using SCADA">
+            </div>
+        </section>
+        <section id="courses">
+            <h2>Courses</h2>
+            <div class="portfolio-item">
+                <h3>Machine Design</h3>
+                <p>University of Moratuwa, Sri Lanka<br>
+                - Learned principles of machine design and analysis.<br>
+                - Completed multiple design projects and presentations.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Finite Element Analysis</h3>
+                <p>University of Moratuwa, Sri Lanka<br>
+                - Studied FEA theory and applications.<br>
+                - Worked on simulation projects using ANSYS software.</p>
+            </div>
+        </section>
+        <section id="activities">
+            <h2>Activities</h2>
+            <div class="portfolio-item">
+                <h3>President of Engineering Society</h3>
+                <p>University of Moratuwa, Sri Lanka<br>
+                - Organized events and workshops for engineering students.<br>
+                - Led a team of 15 members to successfully execute various initiatives.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Volunteer at Local Community Center</h3>
+                <p>Kokuvil Hindu College<br>
+                - Participated in community development programs.<br>
+                - Conducted educational sessions for underprivileged children.</p>
+            </div>
+        </section>
+        <section id="references">
+            <h2>References</h2>
+            <div class="portfolio-item">
+                <h3>Mr. Sasiranga De Silva</h3>
+                <p>Former lecturer, of Mechanical Engineering<br>
+                University of Moratuwa, Sri Lanka<br>
+                Founder and CEO of ThermalR industries<br>
+                Email: sasiranga@gmail.com<br>
+                Phone: +94 777358765</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Mr. Ramesh Warusaritharana</h3>
+                <p>R&D Engineer<br>
+                ThermalR Industries<br>
+                Phone: +94 76 862 7572</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rathees Thillainathan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
